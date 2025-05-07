@@ -1,148 +1,252 @@
-# EX-26-AREA-OF-RECTANGLE-USING- POINTER
-## AIM
-To write a C Program to find area of rectangle using pointer.
+## Name: S.Pugazhenthi
+## Reg No: 212224240120
+# EX-06 - Looping
+## AIM:
+Write a C program to print even numbers ranging from M to N (including M and N values).
 
-## ALGORITHM
-1.	Start the program.
-2.	Read two numbers.
-3.	Calculate the area of rectangle using the formula area=(x)(*y)
-4.	Display the result.
-5.	Stop the program.
+## ALGORITHM:
+1.	Declare two integer variables to store the values of M and N.
+2.	Use the printf function to prompt the user to enter the values of M and N.
+3.	Use the scanf function to read the values of M and N from the user.
+4.	Use a loop (for or while) to iterate from M to N.
+5.	Inside the loop, check if the current number is even.
+6.	If the current number is even, print it.
+7.	Continue the loop until you have iterated through all numbers from M to N.
 
-## PROGRAM
+## PROGRAM:
+```
+#include <stdio.h>
 
-## OUTPUT
-		       	
+int main() {
+    int M, N;
+
+    printf("Enter the value of M: ");
+    scanf("%d", &M);
+
+    printf("Enter the value of N: ");
+    scanf("%d", &N);
+
+    for (int i = M; i <= N; i++) {
+        if (i % 2 == 0) {
+            printf("%d ", i);
+        }
+    }
+
+    return 0;
+}
+```
+
+## OUTPUT:
 
 
-## RESULT
-Thus the program to find area of rectangle using pointer has been executed successfully
+![image](https://github.com/user-attachments/assets/b3c08cc9-25de-403a-abc1-73c59285af74)
+
+## RESULT:
+Thus the program to print even numbers ranging from M to N (including M and N values) has been executed successfully
  
  
 
 
-# EX-27-DYNAMIC-MEMORY-ALLOCATION
-## AIM
-To write a C Program to print 'WELCOME' using malloc() and free().
+# EX-07-Nested-loop
 
-## ALGORITHM
-1.	Start the program.
-2.	Read a string variable.
-3.	Allocate memory using malloc().
-4.	Display the string.
-5.	Remove the allocated memory using free().
-6.	Stop the program.
+## AIM:
 
-## PROGRAM
+Write a C program to print the given triangular pattern using loop.
 
-## OUTPUT
+## ALGORITHM:
+
+1.	Declare a variable to store the number of rows in the triangle.
+2.	Use the printf function to prompt the user to enter the number of rows.
+3.	Use a loop (for or while) to iterate through each row.
+4.	Inside the loop, use another loop to print the desired number of asterisks for each row.
+5.	Continue the loop until you have printed the entire triangular pattern.
+
+## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int rows;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+
+## OUTPUT:
+
+![image](https://github.com/user-attachments/assets/f922da0f-4ce7-4ad4-af79-3871069d5331)
 
 
 
-## RESULT
-Thus the program to print 'WELCOME' using malloc() and free() has been executed successfully
+
+## RESULT:
+
+Thus the program to print the given triangular pattern using loop has been executed successfully
  
-.
-
-
-
-# EX-28-STUDENT-INFORMATION-USING-STRUCTURE
-
-## AIM
-
-To write a C Program to store the student information and display it using structure.
-
-## ALGORITHM
-
-1.	Start the program.
-2.	Create a student structure with name, roll number and marks as members.
-3.	Using structure variable read the structure members and print them.
-4.	Stop the program.
-
-## PROGRAM
-
-
-## OUTPUT
-
-
-## RESULT
-
-Thus the program to store the student information and display it using structure has been executed successfully
- 
- 
-
-
-# EX-29-EMPLOYEE-STRUCTURE-SALARY-CALCULATION
-
-## AIM
-
-To write a C Program to read and store the data of 3 employees and calculate their Gross Salary using the concept of structure.
-
-## ALGORITHM
-
-1.	Start the program.
-2.	Create an employee structure with name, id and salary details as members.
-3.	Using structure variable read the structure members.
-4.	Calculate the gross salary and print the details.
-5.	Stop the program.
-
-## PROGRAM
-
-
- ## OUTPUT
-
- 
-
-## RESULT
-
-Thus the C program to read and store the data of 3 employees and calculate their Gross Salary using the concept of structure
  
 
 
+# EX-08-Functions
+
+## AIM:
+
+Write a C program to perform addition and subtraction of two numbers using functions (with argument and without return type).
+
+## ALGORITHM:
+
+1.	Declare two functions, one for addition and one for subtraction. Both functions should take two integer arguments.
+2.	Inside the addition & subtraction function, add & subtract the two numbers and print the result.
+3.	In the main function, declare two integer variables and read their values from the user.
+4.	Call the addition and subtraction functions, passing the two numbers as arguments.
+
+## PROGRAM:
+```
+#include <stdio.h>
+
+void add(int a, int b) {
+    printf("Addition = %d\n", a + b);
+}
+
+void subtract(int a, int b) {
+    printf("Subtraction = %d\n", a - b);
+}
+
+int main() {
+    int num1, num2;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    add(num1, num2);
+    subtract(num1, num2);
+
+    return 0;
+}
+```
+
+## OUTPUT:
+
+```
+Enter two numbers: 15 10
+Addition = 25
+Subtraction = 5
+```
 
 
-# EX – 30 -STUDENTS MARK -TOTAL &AVERAGE USING STRUCURE
 
-## AIM
-Create a C program to calculate the total and average of student using structure.
+## RESULT:
 
-## ALGORITHM 
-
-Step 1: Start the program.
-Step 2: Define a struct student with:
-•	name: a character array (size 10) for the student's name (not used in the logic).
-•	rollno: an integer for the student's roll number (also unused).
-•	subject[5]: an array to store marks of 5 subjects.
-•	total: an integer to store total marks.
-Step 3: Declare an array s[2] of type struct student for 2 students. Also declare variables n, i, and j for input 
-             and iteration.
-Step 4: Input Loop (i = 0 to 1):
-•	Read an integer n (but it's not used later — possibly intended for roll number or placeholder).
-•	Loop j = 0 to 4:
-o	Read 5 subject marks into s[i].subject[j].
-Step 5: Total Marks Calculation Loop (i = 0 to 1):
-•	Initialize s[i].total to 0.
-•	Loop j = 0 to 4:
-o	Add each subject mark to s[i].total.
-Step 6: Override Total (Hardcoded):
-•	Set s[0].total = 374;
-•	Set s[1].total = 383;
-           This step overwrites the computed totals. It seems like testing or hardcoded totals — unnecessary if you’re 
-                 already calculating them.
-Step 7: Output Loop (i = 0 to 1):
-•	Print s[i].total for each student.
-Step 8: End the program.
-
-## PROGRAM
-
-
-## OUTPUT
-
+Thus the program to perform addition and subtraction of two numbers using functions has been executed successfully
+ 
  
 
-## RESULT
 
-Thus the C program to calculate the total and average of student using structure has been executed successfully.
-	
+# EX-09-Use For Loop
+
+## AIM:
+
+Write a c program to find the sum of odd digits using for loop
+
+## ALGORITHM:
+
+1.	Declare variables to store the input number and the sum of odd digits.
+2.	Initialize the sum of odd digits to 0.
+3.	Use a for loop to iterate through each digit of the input number.
+4.	Inside the loop, extract the rightmost digit of the number (using the modulo operator % and division by 10).
+5.	If the digit is odd, add it to the sum of odd digits.
+6.	Print the sum of odd digits.
+
+## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int num, sum = 0, digit;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    for (; num != 0; num /= 10) {
+        digit = num % 10;
+        if (digit % 2 != 0) {
+            sum += digit;
+        }
+    }
+
+    printf("Sum of odd digits = %d\n", sum);
+
+    return 0;
+}
+
+```
 
 
+## OUTPUT:
+![image](https://github.com/user-attachments/assets/692092b4-b6f5-4658-924d-c75d000d3c8a)
+
+
+
+
+## RESULT:
+
+Thus the program to find the sum of odd digits using for loop has been executed successfully.
+
+
+
+
+# EX – 10 - Factorial of a Number Using a Function
+## AIM:
+To write a C program that calculates the factorial of a given number using a user-defined function.
+## ALGORITHM:
+1.	Start
+2.	Declare the function fact().
+3.	In the main() function, call the fact() function.
+4.	In fact() function:
+a.	Declare variables i, N, and fact (initialized to 1).
+b.	Read an integer N from the user.
+c.	Use a for loop from 1 to N:
+i.	Multiply fact by i in each iteration.
+d.	After the loop, print the factorial value.
+5.	End
+
+## PROGRAM:
+```
+#include <stdio.h>
+
+void fact() {
+    int i, N, factorial = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &N);
+
+    for (i = 1; i <= N; i++) {
+        factorial *= i;
+    }
+
+    printf("Factorial of %d = %d\n", N, factorial);
+}
+
+int main() {
+    fact();
+    return 0;
+}
+```
+
+## OUTPUT:
+![image](https://github.com/user-attachments/assets/0248fb6f-92b8-4a11-9cc2-ceb6ea9328b6)
+
+
+## RESULT:
+The program correctly computes the factorial of a given number using a separate function and displays the result.
+ 
